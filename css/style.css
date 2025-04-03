@@ -17,7 +17,7 @@ body {
 /* Modo Escuro */
 body.dark-mode {
   background: #1e1e1e;
-  color: #dcdcdc;
+  color: #000000;
 }
 
 body.dark-mode header {
