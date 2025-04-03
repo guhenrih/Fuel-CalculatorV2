@@ -1,0 +1,198 @@
+/* Reset e Configurações Básicas */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  padding: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background: #1e1e1e;
+  color: #dcdcdc;
+}
+
+body.dark-mode header {
+  background: #333;
+}
+
+body.dark-mode nav ul li a {
+  color: #dcdcdc;
+}
+
+body.dark-mode .button,
+body.dark-mode #mode-toggle {
+  background: #555;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Cabeçalho e Navegação */
+header {
+  background: #0066cc;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8em;
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: 10px;
+}
+
+#hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background: #fff;
+  transition: background 0.3s ease;
+}
+
+/* Nav Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  background: #004a99;
+}
+
+#mode-toggle {
+  background: #004a99;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Menu responsivo para mobile */
+@media (max-width: 600px) {
+  #hamburger-menu {
+    display: block;
+  }
+  /* O menu inicia oculto */
+  .nav-menu {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  /* Quando aberto, adicionamos a classe "open" */
+  .nav-menu.open {
+    max-height: 500px; /* valor suficiente para exibir o menu */
+    opacity: 1;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+  }
+  .nav-menu ul li a {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .nav-menu ul li a:last-child {
+    border-bottom: none;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Main Container */
+main {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Grupos de Input */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input[type="number"],
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botões */
+.button {
+  background: #0066cc;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #004a99;
+}
+
+.result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 601px) {
+  .nav-menu {
+    display: block !important;
+    max-height: none;
+    opacity: 1;
+  }
+  .nav-menu ul {
+    flex-direction: row;
+  }
+}
