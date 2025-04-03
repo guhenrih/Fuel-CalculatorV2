@@ -25,7 +25,7 @@ body.dark-mode header {
 }
 
 body.dark-mode nav ul li a {
-  color: #dcdcdc;
+  color: #000000;
 }
 
 body.dark-mode .button,
